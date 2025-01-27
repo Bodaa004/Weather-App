@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Weather</title>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg bg-dark-blue">
+      <div class="container">
+        <a
+          class="navbar-brand d-flex justify-content-between align-items-center column-gap-2"
+          href="#"
+        >
+          <img src="Images/logo.png" alt="Logo" width="64" height="38" />
+          <div class="logo-type">
+            <h1 class="title fs-6 fw-bold text-white m-0">Weather</h1>
+            <small class="desc fs-6 text-white m-0">tagline goes here</small>
+          </div>
+        </a>
+        <button
+          class="navbar-toggler text-white"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse py-4" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 rounded-2">
+            <li class="nav-item">
+              <a
+                class="nav-link text-center position-relative text-white px-4 active"
+                aria-current="page"
+                href="#"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-center position-relative text-white px-4"
+                href="#"
+                >Link</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-center position-relative text-white px-4"
+                href="#"
+                >News</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-center position-relative text-white px-4"
+                href="#"
+                >Live Cameras</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-center position-relative text-white px-4"
+                href="#"
+                >Photos</a
+              >
+            </li>
+
+            <li class="nav-item">
+              <a
+                class="nav-link text-center position-relative text-white px-4"
+                href="#"
+                >Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="position-relative">
+      <div class="position-relative z-1 vh-100">
+        <img src="./images/banner.png" class="w-100 h-50" alt="" />
+      </div>
+      <div
+        class="container d-flex flex-wrap position-absolute z-2 top-50 start-50 translate-middle"
+      >
+        <div class="w-100 d-flex justify-content-center align-items-center">
+          <div
+            class="d-flex form-control bg-dark-blue rounded-pill border-0 pe-1"
+          >
+            <input
+              class="form-control border-0 bg-transparent text-white"
+              type="search"
+              id="search"
+              placeholder="Find your location..."
+              aria-label="Search"
+            />
+            <button 
+            id="searchBtn"
+            class="btn btn-primary rounded-pill text-white mx-0 px-4">
+              Find
+            </button>
+          </div>
+        </div>
+        <div class="card-group w-100 my-5 row mx-auto">
+          <div class="card col-md-4 px-0 bg-light-blue text-white">
+            <div class="card-header w-100 bg-light-header text-white d-flex justify-content-between">
+              <small id="today" class="text-gray">today</small>
+              <small id="date" class="text-gray">date</small>
+            </div>
+            <div class="card-body py-4">
+              <p id="city" class="card-text text-gray">City</p>
+              <h5 class="card-title fs-90"><span id="currentTemp">15.5</span>°C</h5>
+              <p class="card-text">
+                <img id="icon" src="" alt="">
+              </p>
+              <p id="status" class="card-text text-default"></p>
+              <div class="d-flex w-75 justify-content-between">
+                <p
+                  class="card-text d-flex align-items-center column-gap-1 text-gray"
+                >
+                  <i class="fa-solid fa-umbrella fs-4 text-gray rotate-45"></i>
+                  <span id="rain"></span>%
+                </p>
+                <p
+                  class="card-text d-flex align-items-center column-gap-1 text-gray"
+                >
+                  <i class="fa-solid fa-wind fs-4 text-gray"></i>
+                  <span id="wind"></span>km/h
+                </p>
+                <p
+                  class="card-text d-flex align-items-center column-gap-1 text-gray mb-3"
+                >
+                  <i class="fa-regular fa-compass fs-4 text-gray rotate-45"></i>
+                  <span id="direction"></span>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="card col-md-4 px-0 bg-dark-card text-white">
+            <div class="card-header w-100 bg-dark-blue text-white d-flex justify-content-center">
+              <small id="tomorrow" class="text-gray">tomorrow</small>
+            </div>
+            <div class="card-body py-4 text-center">
+              <p class="card-text my-5">
+                <img id="tomIcon" src="" alt="">
+              </p>
+              <h5 class="card-title fs-4"><span id="tomMax">15.5</span>°C</h5>
+              <h5 class="card-text fs-6 text-gray"><span id="tomMin">11.5</span>°C</h5>
+              <p id="statusTom" class="card-text text-default mt-3"></p>
+            </div>
+          </div>
+
+          <div class="card col-md-4 px-0 bg-dark-card text-white">
+            <div class="card-header w-100 bg-dark-blue text-white d-flex justify-content-center">
+              <small id="afterTom" class="text-gray">ِAfter tomorrow</small>
+            </div>
+            <div class="card-body py-4 text-center">
+              <p class="card-text my-5">
+                <img id="afterTomIcon" src="" alt="">
+              </p>
+              <h5 class="card-title fs-4"><span id="afterTomMax">15.5</span>°C</h5>
+              <h5 class="card-text fs-6 text-gray"><span id="afterTomMin">15.5</span>°C</h5>
+              <p id="statusAfterTom" class="card-text text-default mt-3"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>

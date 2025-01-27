@@ -1,0 +1,137 @@
+:root {
+  --button-blue: #009ad8;
+  --dark-blue: #222530;
+  --light-blue: #323544;
+}
+
+.default-color{
+    background-color: var(--button-blue);
+}
+
+.bg-dark-blue {
+  background-color: var(--dark-blue);
+}
+
+.bg-light-blue {
+  background-color: var(--light-blue);
+}
+
+.bg-dark-card {
+  background-color: #262936;
+}
+
+.bg-light-header {
+  background-color: #2d303d;
+}
+.bg-dark-header {
+  background-color: #222530;
+}
+
+.text-default{
+    color: var(--button-blue);
+}
+.text-gray {
+    color: gray !important;
+}
+
+.fs-90 {
+    font-size: 90px;
+}
+
+.rotate-45 {
+    transform: rotate(45deg);
+}
+
+
+body {
+  color: #bfc1c8;
+  font-family: "Roboto", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 1.5;
+  background: #1e202b;
+}
+
+nav .title {
+  font-size: 16px !important;
+}
+
+nav .desc {
+  font-size: 10px !important;
+}
+
+.navbar-toggler {
+  padding: 20px 10px;
+  color: var(--button-blue) !important;
+  background-color: transparent;
+  border-radius: 40px;
+}
+
+.navbar-toggler:hover {
+  border-radius: 40px;
+  border-color: var(--button-blue) !important;
+  transition: all 0.3s;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 2557, 255, 0.75%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+
+.navbar-nav .nav-link.active {
+  color: var(--button-blue) !important;
+}
+
+.navbar .nav-link::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    right: -2px;
+    bottom: -2px;
+    left: -2px;
+    border: 2px solid transparent;
+    transition: all 100ms;
+}
+
+.navbar .nav-item .nav-link {
+    padding: 15px;
+    transition: all 100ms;
+    font-size: medium;
+}
+
+.navbar .nav-item:hover .nav-link::before {
+    border: solid 2px var(--button-blue);
+    border-radius: 50rem;
+}
+.navbar .nav-item:hover .nav-link {
+    color: var(--button-blue) !important;
+}
+
+input::placeholder {
+    color: gray !important;
+}
+
+#search {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+#search::before {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+#search::after {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
+#search:focus {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none;
+}
+
